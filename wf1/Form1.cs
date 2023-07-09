@@ -6,5 +6,10 @@ namespace wf1
         {
             InitializeComponent();
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            label1.Text = "hello world";
+        }
     }
 }

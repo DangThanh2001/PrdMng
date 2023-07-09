@@ -1,0 +1,17 @@
+F:\PRN211\PrdMng\wf1\bin\Debug\net6.0-windows\wf1.exe
+F:\PRN211\PrdMng\wf1\bin\Debug\net6.0-windows\wf1.deps.json
+F:\PRN211\PrdMng\wf1\bin\Debug\net6.0-windows\wf1.runtimeconfig.json
+F:\PRN211\PrdMng\wf1\bin\Debug\net6.0-windows\wf1.dll
+F:\PRN211\PrdMng\wf1\bin\Debug\net6.0-windows\wf1.pdb
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.csproj.AssemblyReference.cache
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.Form1.resources
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.csproj.GenerateResource.cache
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.GeneratedMSBuildEditorConfig.editorconfig
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.AssemblyInfoInputs.cache
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.AssemblyInfo.cs
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.csproj.CoreCompileInputs.cache
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.dll
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\refint\wf1.dll
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.pdb
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\wf1.genruntimeconfig.cache
+F:\PRN211\PrdMng\wf1\obj\Debug\net6.0-windows\ref\wf1.dll
