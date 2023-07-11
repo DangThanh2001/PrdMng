@@ -93,5 +93,36 @@ namespace ManagerCustomer.Service
             }
             return list;
         }
+
+        public void updateCustomer(Customer customer)
+        {
+
+        }
+
+        public void addCustomer(Customer customer)
+        {
+            using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
+            {
+                IXLWorksheet worksheet = workbook.Worksheet(1);
+                int lastRow = worksheet.LastRowUsed()?.RowNumber() ?? 1;
+                int rowIndex = lastRow + 1;
+
+                worksheet.Cell(rowIndex, 1).Value = customer.id.ToString();
+                worksheet.Cell(rowIndex, 2).Value = customer.phone;
+                rowIndex++;
+                workbook.SaveAs(GlobalStrings.FILE_EXCEL_NAME);
+            }
+        }
+
+        public void removeCustomer(Customer customer)
+        {
+            using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
+            {
+                IXLWorksheet worksheet = workbook.Worksheet(1);
+                int rowToDelete = 2;
+                worksheet.Row(rowToDelete).Delete();
+                workbook.Save();
+            }
+        }
     }
 }

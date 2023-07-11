@@ -38,6 +38,10 @@
             label2 = new Label();
             label3 = new Label();
             cbDate = new CheckBox();
+            btnAdd = new Button();
+            btnUpdate = new Button();
+            btnDelete = new Button();
+            lbCount = new Label();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
@@ -47,9 +51,11 @@
             dtView.AllowUserToDeleteRows = false;
             dtView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(dtView, "dtView");
+            dtView.MultiSelect = false;
             dtView.Name = "dtView";
             dtView.ReadOnly = true;
             dtView.RowTemplate.Height = 29;
+            dtView.CellClick += dtView_CellClick;
             // 
             // label1
             // 
@@ -95,10 +101,40 @@
             cbDate.Name = "cbDate";
             cbDate.UseVisualStyleBackColor = true;
             // 
+            // btnAdd
+            // 
+            resources.ApplyResources(btnAdd, "btnAdd");
+            btnAdd.Name = "btnAdd";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(btnUpdate, "btnUpdate");
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDelete
+            // 
+            resources.ApplyResources(btnDelete, "btnDelete");
+            btnDelete.Name = "btnDelete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // lbCount
+            // 
+            resources.ApplyResources(lbCount, "lbCount");
+            lbCount.Name = "lbCount";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lbCount);
+            Controls.Add(btnDelete);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnAdd);
             Controls.Add(cbDate);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -126,5 +162,9 @@
         private Label label2;
         private Label label3;
         private CheckBox cbDate;
+        private Button btnAdd;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private Label lbCount;
     }
 }

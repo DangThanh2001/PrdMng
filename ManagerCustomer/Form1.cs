@@ -9,6 +9,7 @@ namespace ManagerCustomer
     {
         ExcelService excelService;
         List<Customer> list;
+        Customer customer;
 
         public Form1()
         {
@@ -20,7 +21,9 @@ namespace ManagerCustomer
         {
             dtView.DataSource = excelService.readFromExcel();
             list = excelService.readFromExcel();
+            lbCount.Text = "Tong: " + list.Count;
             dtView.Columns["recordDate"].Visible = false;
+            dtView.ClearSelection();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,10 +52,11 @@ namespace ManagerCustomer
             if (!(string.IsNullOrEmpty(search) || string.IsNullOrWhiteSpace(search)))
             {
                 rs = list.Where(x =>
+                x.id.ToString().ToLower().Contains(search) ||
                 x.fullName.ToLower().Contains(search) ||
-                x.phone.ToLower().Contains(search) ||
+                (x.phone != null && x.phone.ToLower().Contains(search)) ||
                 x.address.ToLower().Contains(search) ||
-                x.note.ToLower().Contains(search)
+                (x.note != null && x.note.ToLower().Contains(search))
                 ).ToList();
             }
             if (cbDate.Checked)
@@ -63,6 +67,45 @@ namespace ManagerCustomer
                     ).ToList();
             }
             dtView.DataSource = rs;
+        }
+
+        private void dtView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            DataGridViewRow row = new DataGridViewRow();
+            row = dtView.Rows[e.RowIndex];
+            var cusId = Convert.ToString(row.Cells[0].Value);
+            var isG = Guid.TryParse(cusId, out Guid guid);
+            if (isG)
+            {
+                customer = list.FirstOrDefault(x => x.id == guid);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (customer == null) return;
+            try
+            {
+                excelService.removeCustomer(customer);
+                MessageBox.Show("OK");
+                loadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
