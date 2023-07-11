@@ -72,6 +72,7 @@ namespace ManagerCustomer.Service
                     var idStr = row.Cell(1).Value.GetText();
                     Guid.TryParse(idStr, out Guid guid);
                     var d = row.Cell(10).GetValue<string>();
+                    var date = DateTime.Parse(d);
                     Customer c = new Customer()
                     {
                         id = guid,
@@ -83,7 +84,8 @@ namespace ManagerCustomer.Service
                         machineRecordR = row.Cell(7).GetValue<string>(),
                         realRecordL = row.Cell(8).GetValue<string>(),
                         realRecordR = row.Cell(9).GetValue<string>(),
-                        recordDate = DateTime.Parse(d),
+                        recordDate = date,
+                        recordTimeStr = date.ToString(GlobalStrings.FORMAT_DATE),
                         note = row.Cell(11).GetValue<string>(),
                     };
                     list.Add(c);

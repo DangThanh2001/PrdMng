@@ -20,6 +20,7 @@ namespace ManagerCustomer
         {
             dtView.DataSource = excelService.readFromExcel();
             list = excelService.readFromExcel();
+            dtView.Columns["recordDate"].Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,18 +34,34 @@ namespace ManagerCustomer
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
+            search();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            search();
+        }
+
+        private void search()
+        {
             var search = tbSearch.Text.Trim().ToLower();
-            if(string.IsNullOrEmpty(search) || string.IsNullOrWhiteSpace(search))
+            var rs = excelService.readFromExcel();
+            if (!(string.IsNullOrEmpty(search) || string.IsNullOrWhiteSpace(search)))
             {
-                loadData();
-                return;
+                rs = list.Where(x =>
+                x.fullName.ToLower().Contains(search) ||
+                x.phone.ToLower().Contains(search) ||
+                x.address.ToLower().Contains(search) ||
+                x.note.ToLower().Contains(search)
+                ).ToList();
             }
-            var rs = list.Where(x =>
-            x.fullName.ToLower().Contains(search) ||
-            x.phone.ToLower().Contains(search) ||
-            x.address.ToLower().Contains(search) ||
-            x.note.ToLower().Contains(search)
-            ).ToList();
+            if (cbDate.Checked)
+            {
+                rs = rs.Where(x =>
+                    x.recordDate.Date >= fromDate.Value.Date &&
+                    x.recordDate.Date <= toDate.Value.Date
+                    ).ToList();
+            }
             dtView.DataSource = rs;
         }
     }

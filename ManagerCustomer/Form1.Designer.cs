@@ -32,6 +32,12 @@
             dtView = new DataGridView();
             label1 = new Label();
             tbSearch = new TextBox();
+            btnSearch = new Button();
+            fromDate = new DateTimePicker();
+            toDate = new DateTimePicker();
+            label2 = new Label();
+            label3 = new Label();
+            cbDate = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
@@ -56,10 +62,49 @@
             tbSearch.Name = "tbSearch";
             tbSearch.TextChanged += tbSearch_TextChanged;
             // 
+            // btnSearch
+            // 
+            resources.ApplyResources(btnSearch, "btnSearch");
+            btnSearch.Name = "btnSearch";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // fromDate
+            // 
+            resources.ApplyResources(fromDate, "fromDate");
+            fromDate.Name = "fromDate";
+            // 
+            // toDate
+            // 
+            resources.ApplyResources(toDate, "toDate");
+            toDate.Name = "toDate";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(label3, "label3");
+            label3.Name = "label3";
+            // 
+            // cbDate
+            // 
+            resources.ApplyResources(cbDate, "cbDate");
+            cbDate.Name = "cbDate";
+            cbDate.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(cbDate);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(toDate);
+            Controls.Add(fromDate);
+            Controls.Add(btnSearch);
             Controls.Add(tbSearch);
             Controls.Add(label1);
             Controls.Add(dtView);
@@ -75,5 +120,11 @@
         private DataGridView dtView;
         private Label label1;
         private TextBox tbSearch;
+        private Button btnSearch;
+        private DateTimePicker fromDate;
+        private DateTimePicker toDate;
+        private Label label2;
+        private Label label3;
+        private CheckBox cbDate;
     }
 }

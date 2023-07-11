@@ -30,8 +30,9 @@ namespace ManagerCustomer.Entity
         public string? realRecordL { get; set; }
         [DisplayName("Chỉ số mắt phải")]
         public string? realRecordR { get; set; }
-        [DisplayName("Ngày tạo")]
         public DateTime recordDate { get; set; }
+        [DisplayName("Ngày tạo")]
+        public string recordTimeStr { get; set; }
         [StringLength(500)]
         [DisplayName("Ghi chú")]
         public string? note { get; set; }
