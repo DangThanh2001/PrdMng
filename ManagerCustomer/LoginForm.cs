@@ -1,4 +1,5 @@
-﻿using ManagerCustomer.Service;
+﻿using ManagerCustomer.Entity;
+using ManagerCustomer.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,6 @@ namespace ManagerCustomer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //ExcelService excelService = new ExcelService();
-            //if (!excelService.checkFileExist())
-            //    excelService.createExcel();
             if (LoginService.Login(tbUserName.Text, tbPassword.Text))
             {
                 Hide();

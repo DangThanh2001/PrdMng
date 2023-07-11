@@ -31,15 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             dtView = new DataGridView();
             label1 = new Label();
+            tbSearch = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
             // dtView
             // 
-            resources.ApplyResources(dtView, "dtView");
             dtView.AllowUserToAddRows = false;
             dtView.AllowUserToDeleteRows = false;
             dtView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(dtView, "dtView");
             dtView.Name = "dtView";
             dtView.ReadOnly = true;
             dtView.RowTemplate.Height = 29;
@@ -49,10 +50,17 @@
             resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
             // 
+            // tbSearch
+            // 
+            resources.ApplyResources(tbSearch, "tbSearch");
+            tbSearch.Name = "tbSearch";
+            tbSearch.TextChanged += tbSearch_TextChanged;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(tbSearch);
             Controls.Add(label1);
             Controls.Add(dtView);
             Name = "Form1";
@@ -66,5 +74,6 @@
 
         private DataGridView dtView;
         private Label label1;
+        private TextBox tbSearch;
     }
 }

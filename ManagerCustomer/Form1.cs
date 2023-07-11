@@ -1,31 +1,51 @@
 using ManagerCustomer.Entity;
+using ManagerCustomer.Service;
+using System.Net;
 using System.Windows.Forms;
 
 namespace ManagerCustomer
 {
     public partial class Form1 : Form
     {
+        ExcelService excelService;
+        List<Customer> list;
+
         public Form1()
         {
             InitializeComponent();
+            excelService = new ExcelService();
+        }
+
+        private void loadData()
+        {
+            dtView.DataSource = excelService.readFromExcel();
+            list = excelService.readFromExcel();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var list = new List<Customer>();
-            for (int i = 0; i < 10; i++)
+            if (!excelService.checkFileExist())
             {
-                list.Add(new Customer
-                {
-                    id = Guid.NewGuid(),
-                    fullName = "thanh ne " + i,
-                    address = "",
-                    recordDate = DateTime.Now,
-                    phone = "",
-                    note = "",
-                });
+                excelService.createExcel();
             }
-            dtView.DataSource = list;
+            loadData();
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            var search = tbSearch.Text.Trim().ToLower();
+            if(string.IsNullOrEmpty(search) || string.IsNullOrWhiteSpace(search))
+            {
+                loadData();
+                return;
+            }
+            var rs = list.Where(x =>
+            x.fullName.ToLower().Contains(search) ||
+            x.phone.ToLower().Contains(search) ||
+            x.address.ToLower().Contains(search) ||
+            x.note.ToLower().Contains(search)
+            ).ToList();
+            dtView.DataSource = rs;
         }
     }
 }
