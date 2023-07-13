@@ -37,3 +37,4 @@ F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.pdb
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.genruntimeconfig.cache
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ref\ManagerCustomer.dll
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.AddCusForm.resources
+F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.UpdateForm.resources

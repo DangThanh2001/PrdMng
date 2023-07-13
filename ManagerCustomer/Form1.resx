@@ -472,7 +472,7 @@
     <value>13</value>
   </data>
   <data name="btnReload.Text" xml:space="preserve">
-    <value>Cập nhật</value>
+    <value>Làm mới</value>
   </data>
   <data name="&gt;&gt;btnReload.Name" xml:space="preserve">
     <value>btnReload</value>

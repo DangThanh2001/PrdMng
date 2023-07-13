@@ -85,7 +85,13 @@ namespace ManagerCustomer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            if(customer == null)
+            {
+                return;
+            }
+            UpdateForm updateForm = new UpdateForm(customer);
+            updateForm.Show();
+            updateForm.FormClosed += new FormClosedEventHandler(Form_Closed);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

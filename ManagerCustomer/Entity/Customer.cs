@@ -21,8 +21,6 @@ namespace ManagerCustomer.Entity
         public string? phone { get; set; }
         [DisplayName("Địa chỉ")]
         public string? address { get; set; }
-        [DisplayName("Tiền")]
-        public double? totalPrice { get; set; }
         [DisplayName("Máy đo mắt trái")]
         public string? machineRecordL { get; set; }
         [DisplayName("Máy đo mắt phải")]
