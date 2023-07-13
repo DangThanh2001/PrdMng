@@ -101,6 +101,7 @@ namespace ManagerCustomer.Service
 
         public void addCustomer(Customer customer)
         {
+            var t = customer.totalPrice == null ? 0 : customer.totalPrice;
             using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
             {
                 IXLWorksheet worksheet = workbook.Worksheet(1);
@@ -108,7 +109,16 @@ namespace ManagerCustomer.Service
                 int rowIndex = lastRow + 1;
 
                 worksheet.Cell(rowIndex, 1).Value = customer.id.ToString();
-                worksheet.Cell(rowIndex, 2).Value = customer.phone;
+                worksheet.Cell(rowIndex, 2).Value = customer.fullName;
+                worksheet.Cell(rowIndex, 3).Value = customer.phone;
+                worksheet.Cell(rowIndex, 4).Value = customer.address;
+                worksheet.Cell(rowIndex, 5).Value = t;
+                worksheet.Cell(rowIndex, 6).Value = customer.machineRecordL;
+                worksheet.Cell(rowIndex, 7).Value = customer.machineRecordR;
+                worksheet.Cell(rowIndex, 8).Value = customer.realRecordL;
+                worksheet.Cell(rowIndex, 9).Value = customer.realRecordR;
+                worksheet.Cell(rowIndex, 10).Value = DateTime.Now;
+                worksheet.Cell(rowIndex, 11).Value = customer.note;
                 rowIndex++;
                 workbook.SaveAs(GlobalStrings.FILE_EXCEL_NAME);
             }
@@ -119,7 +129,11 @@ namespace ManagerCustomer.Service
             using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
             {
                 IXLWorksheet worksheet = workbook.Worksheet(1);
-                int rowToDelete = 2;
+                var c = worksheet.FirstCellUsed(x => 
+                x.Value.ToString().Trim() == customer.id.ToString().Trim()
+                );
+                
+                int rowToDelete = c.Address.RowNumber;
                 worksheet.Row(rowToDelete).Delete();
                 workbook.Save();
             }

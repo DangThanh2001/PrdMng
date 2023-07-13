@@ -14,12 +14,13 @@ namespace ManagerCustomer.Entity
     {
         public Guid id { get; set; }
         [DisplayName("Tên")]
+        [Required(ErrorMessage = "Yêu cầu nhập tên")]
         public string fullName { get; set; }
         [StringLength(10)]
         [DisplayName("SDT")]
         public string? phone { get; set; }
         [DisplayName("Địa chỉ")]
-        public string address { get; set; }
+        public string? address { get; set; }
         [DisplayName("Tiền")]
         public double? totalPrice { get; set; }
         [DisplayName("Máy đo mắt trái")]
@@ -32,8 +33,8 @@ namespace ManagerCustomer.Entity
         public string? realRecordR { get; set; }
         public DateTime recordDate { get; set; }
         [DisplayName("Ngày tạo")]
-        public string recordTimeStr { get; set; }
-        [StringLength(500)]
+        public string? recordTimeStr { get; set; }
+        [StringLength(500, ErrorMessage = "Chỉ trong khoảng 500 chữ")]
         [DisplayName("Ghi chú")]
         public string? note { get; set; }
     }

@@ -1,5 +1,6 @@
 using ManagerCustomer.Entity;
 using ManagerCustomer.Service;
+using ManagerCustomer.Ulti;
 using System.Net;
 using System.Windows.Forms;
 
@@ -55,7 +56,6 @@ namespace ManagerCustomer
                 x.id.ToString().ToLower().Contains(search) ||
                 x.fullName.ToLower().Contains(search) ||
                 (x.phone != null && x.phone.ToLower().Contains(search)) ||
-                x.address.ToLower().Contains(search) ||
                 (x.note != null && x.note.ToLower().Contains(search))
                 ).ToList();
             }
@@ -93,9 +93,12 @@ namespace ManagerCustomer
             if (customer == null) return;
             try
             {
-                excelService.removeCustomer(customer);
-                MessageBox.Show("OK");
-                loadData();
+                if (Common.winCf("Chac chan xoa ?"))
+                {
+                    excelService.removeCustomer(customer);
+                    MessageBox.Show("OK");
+                    loadData();
+                }
             }
             catch (Exception ex)
             {
@@ -105,7 +108,19 @@ namespace ManagerCustomer
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            AddCusForm addCusForm = new AddCusForm();
+            addCusForm.Show();
+            addCusForm.FormClosed += new FormClosedEventHandler(Form_Closed);
+        }
 
+        private void Form_Closed(object? sender, FormClosedEventArgs e)
+        {
+            Form1_Load(sender, e);
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            Form1_Load(sender, e);
         }
     }
 }

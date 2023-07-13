@@ -42,6 +42,7 @@
             btnUpdate = new Button();
             btnDelete = new Button();
             lbCount = new Label();
+            btnReload = new Button();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
@@ -127,10 +128,18 @@
             resources.ApplyResources(lbCount, "lbCount");
             lbCount.Name = "lbCount";
             // 
+            // btnReload
+            // 
+            resources.ApplyResources(btnReload, "btnReload");
+            btnReload.Name = "btnReload";
+            btnReload.UseVisualStyleBackColor = true;
+            btnReload.Click += btnReload_Click;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnReload);
             Controls.Add(lbCount);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
@@ -166,5 +175,6 @@
         private Button btnUpdate;
         private Button btnDelete;
         private Label lbCount;
+        private Button btnReload;
     }
 }

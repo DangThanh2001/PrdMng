@@ -31,5 +31,17 @@ namespace ManagerCustomer.Ulti
             return false;
         }
 
+        public static bool winCf(string message = null)
+        {
+            message = string.IsNullOrEmpty(message) || string.IsNullOrWhiteSpace(message) ?
+                "Da chac chan chua" : message;
+            if (DialogResult.Yes == MessageBox.Show(message, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
     }
 }
