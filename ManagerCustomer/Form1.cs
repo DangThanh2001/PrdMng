@@ -34,6 +34,7 @@ namespace ManagerCustomer
                 excelService.createExcel();
             }
             loadData();
+            customer = null;
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
@@ -104,6 +105,7 @@ namespace ManagerCustomer
                     excelService.removeCustomer(customer);
                     MessageBox.Show("OK");
                     loadData();
+                    customer = null;
                 }
             }
             catch (Exception ex)

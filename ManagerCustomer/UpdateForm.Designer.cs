@@ -31,7 +31,6 @@
             btnClose = new Button();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -79,16 +78,6 @@
             label2.Size = new Size(58, 26);
             label2.TabIndex = 2;
             label2.Text = "SDT";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(27, 246);
-            label3.Name = "label3";
-            label3.Size = new Size(55, 26);
-            label3.TabIndex = 4;
-            label3.Text = "Tiền";
             // 
             // label4
             // 
@@ -201,7 +190,7 @@
             // tbRealRight
             // 
             tbRealRight.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tbRealRight.Location = new Point(851, 327);
+            tbRealRight.Location = new Point(851, 333);
             tbRealRight.Name = "tbRealRight";
             tbRealRight.Size = new Size(309, 34);
             tbRealRight.TabIndex = 7;
@@ -258,7 +247,6 @@
             Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(label3);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -276,7 +264,6 @@
         private Button btnClose;
         private Label label1;
         private Label label2;
-        private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;

@@ -1,13 +1,7 @@
 ﻿using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Bibliography;
 using ManagerCustomer.Entity;
 using ManagerCustomer.Ulti;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagerCustomer.Service
 {
@@ -122,7 +116,7 @@ namespace ManagerCustomer.Service
             using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
             {
                 IXLWorksheet worksheet = workbook.Worksheet(1);
-                int lastRow = worksheet.LastRowUsed()?.RowNumber() ?? 1;
+                int lastRow = worksheet.LastRowUsed()?.RowNumber() == 1 ? 2 : worksheet.LastRowUsed().RowNumber();
                 int rowIndex = lastRow + 1;
 
                 worksheet.Cell(rowIndex, 1).Value = customer.id.ToString();
@@ -132,10 +126,11 @@ namespace ManagerCustomer.Service
                 worksheet.Cell(rowIndex, 5).Value = customer.machineRecordL;
                 worksheet.Cell(rowIndex, 6).Value = customer.machineRecordR;
                 worksheet.Cell(rowIndex, 7).Value = customer.realRecordL;
-                worksheet.Cell(rowIndex, 9).Value = customer.realRecordR;
+                worksheet.Cell(rowIndex, 8).Value = customer.realRecordR;
                 worksheet.Cell(rowIndex, 9).Value = DateTime.Now;
                 worksheet.Cell(rowIndex, 10).Value = customer.note;
                 rowIndex++;
+                worksheet.Columns().AdjustToContents();
                 workbook.SaveAs(GlobalStrings.FILE_EXCEL_NAME);
             }
         }
@@ -145,14 +140,28 @@ namespace ManagerCustomer.Service
             using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
             {
                 IXLWorksheet worksheet = workbook.Worksheet(1);
-                var c = worksheet.FirstCellUsed(x => 
+                var c = worksheet.FirstCellUsed(x =>
                 x.Value.ToString().Trim() == customer.id.ToString().Trim()
                 );
-                
                 int rowToDelete = c.Address.RowNumber;
                 worksheet.Row(rowToDelete).Delete();
                 workbook.Save();
             }
+        }
+
+        private int getRowNumber(Customer customer)
+        {
+            int rowToDelete = -1;
+            using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
+            {
+                IXLWorksheet worksheet = workbook.Worksheet(1);
+                var c = worksheet.FirstCellUsed(x =>
+                x.Value.ToString().Trim() == customer.id.ToString().Trim()
+                );
+
+                rowToDelete = c.Address.RowNumber;
+            }
+            return rowToDelete;
         }
     }
 }

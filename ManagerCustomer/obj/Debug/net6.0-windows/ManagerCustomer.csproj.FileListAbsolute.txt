@@ -23,8 +23,10 @@ F:\PRN211\PrdMng\ManagerCustomer\bin\Debug\net6.0-windows\System.Text.Json.dll
 F:\PRN211\PrdMng\ManagerCustomer\bin\Debug\net6.0-windows\XLParser.dll
 F:\PRN211\PrdMng\ManagerCustomer\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.csproj.AssemblyReference.cache
+F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.AddCusForm.resources
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.Form1.resources
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.LoginForm.resources
+F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.UpdateForm.resources
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.csproj.GenerateResource.cache
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.GeneratedMSBuildEditorConfig.editorconfig
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.AssemblyInfoInputs.cache
@@ -36,5 +38,3 @@ F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\refint\ManagerCustomer
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.pdb
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.genruntimeconfig.cache
 F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ref\ManagerCustomer.dll
-F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.AddCusForm.resources
-F:\PRN211\PrdMng\ManagerCustomer\obj\Debug\net6.0-windows\ManagerCustomer.UpdateForm.resources

@@ -36,7 +36,7 @@ namespace ManagerCustomer
             }
             try
             {
-                if(Common.checkStringsIsNullOrEmpty(
+                if (Common.checkStringsIsNullOrEmpty(
                     new string[]
                     {
                         tbName.Text,

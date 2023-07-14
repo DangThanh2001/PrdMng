@@ -41,7 +41,6 @@ namespace ManagerCustomer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
             if (!Common.winCf())
             {
                 return;
