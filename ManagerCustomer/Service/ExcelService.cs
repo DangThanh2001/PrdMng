@@ -148,20 +148,5 @@ namespace ManagerCustomer.Service
                 workbook.Save();
             }
         }
-
-        private int getRowNumber(Customer customer)
-        {
-            int rowToDelete = -1;
-            using (XLWorkbook workbook = new XLWorkbook(GlobalStrings.FILE_EXCEL_NAME))
-            {
-                IXLWorksheet worksheet = workbook.Worksheet(1);
-                var c = worksheet.FirstCellUsed(x =>
-                x.Value.ToString().Trim() == customer.id.ToString().Trim()
-                );
-
-                rowToDelete = c.Address.RowNumber;
-            }
-            return rowToDelete;
-        }
     }
 }
