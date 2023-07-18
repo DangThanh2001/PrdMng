@@ -47,6 +47,8 @@
             rtbNote = new RichTextBox();
             btnUpdate = new Button();
             btnReset = new Button();
+            label10 = new Label();
+            dateCreate = new DateTimePicker();
             SuspendLayout();
             // 
             // btnClose
@@ -93,41 +95,41 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(27, 295);
+            label5.Location = new Point(639, 286);
             label5.Name = "label5";
-            label5.Size = new Size(190, 26);
+            label5.Size = new Size(238, 26);
             label5.TabIndex = 5;
-            label5.Text = "Chỉ số đo mắt trái";
+            label5.Text = "Chỉ số máy đo mắt trái";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(602, 295);
+            label6.Location = new Point(27, 286);
             label6.Name = "label6";
-            label6.Size = new Size(200, 26);
+            label6.Size = new Size(248, 26);
             label6.TabIndex = 6;
-            label6.Text = "Chỉ số đo mắt phải";
+            label6.Text = "Chỉ số máy đo mắt phải";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(602, 341);
+            label7.Location = new Point(27, 332);
             label7.Name = "label7";
-            label7.Size = new Size(211, 26);
+            label7.Size = new Size(258, 26);
             label7.TabIndex = 8;
-            label7.Text = "Chỉ số thật mắt phải";
+            label7.Text = "Chỉ số thật mắt kính phải";
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(27, 341);
+            label8.Location = new Point(639, 332);
             label8.Name = "label8";
-            label8.Size = new Size(201, 26);
+            label8.Size = new Size(248, 26);
             label8.TabIndex = 7;
-            label8.Text = "Chỉ số thật mắt trái";
+            label8.Text = "Chỉ số thật mắt kính trái";
             // 
             // label9
             // 
@@ -166,15 +168,15 @@
             // tbMachineLeft
             // 
             tbMachineLeft.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tbMachineLeft.Location = new Point(243, 287);
+            tbMachineLeft.Location = new Point(893, 283);
             tbMachineLeft.Name = "tbMachineLeft";
             tbMachineLeft.Size = new Size(309, 34);
-            tbMachineLeft.TabIndex = 4;
+            tbMachineLeft.TabIndex = 6;
             // 
             // tbMachineRight
             // 
             tbMachineRight.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tbMachineRight.Location = new Point(851, 287);
+            tbMachineRight.Location = new Point(291, 283);
             tbMachineRight.Name = "tbMachineRight";
             tbMachineRight.Size = new Size(309, 34);
             tbMachineRight.TabIndex = 5;
@@ -182,15 +184,15 @@
             // tbRealLeft
             // 
             tbRealLeft.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tbRealLeft.Location = new Point(243, 333);
+            tbRealLeft.Location = new Point(893, 329);
             tbRealLeft.Name = "tbRealLeft";
             tbRealLeft.Size = new Size(309, 34);
-            tbRealLeft.TabIndex = 6;
+            tbRealLeft.TabIndex = 8;
             // 
             // tbRealRight
             // 
             tbRealRight.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            tbRealRight.Location = new Point(851, 333);
+            tbRealRight.Location = new Point(291, 329);
             tbRealRight.Name = "tbRealRight";
             tbRealRight.Size = new Size(309, 34);
             tbRealRight.TabIndex = 7;
@@ -202,7 +204,7 @@
             rtbNote.MaxLength = 500;
             rtbNote.Name = "rtbNote";
             rtbNote.Size = new Size(1034, 257);
-            rtbNote.TabIndex = 8;
+            rtbNote.TabIndex = 9;
             rtbNote.Text = "";
             // 
             // btnUpdate
@@ -227,11 +229,31 @@
             btnReset.UseVisualStyleBackColor = true;
             btnReset.Click += btnReset_Click;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(30, 242);
+            label10.Name = "label10";
+            label10.Size = new Size(65, 26);
+            label10.TabIndex = 25;
+            label10.Text = "Ngày";
+            // 
+            // dateCreate
+            // 
+            dateCreate.CalendarFont = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dateCreate.Location = new Point(112, 242);
+            dateCreate.Name = "dateCreate";
+            dateCreate.Size = new Size(500, 27);
+            dateCreate.TabIndex = 4;
+            // 
             // UpdateForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1348, 721);
+            Controls.Add(label10);
+            Controls.Add(dateCreate);
             Controls.Add(btnReset);
             Controls.Add(btnUpdate);
             Controls.Add(rtbNote);
@@ -280,5 +302,7 @@
         private RichTextBox rtbNote;
         private Button btnUpdate;
         private Button btnReset;
+        private Label label10;
+        private DateTimePicker dateCreate;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ManagerCustomer
+﻿using System.Globalization;
+
+namespace ManagerCustomer
 {
     partial class Form1
     {
@@ -41,7 +43,6 @@
             btnAdd = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
-            lbCount = new Label();
             btnReload = new Button();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
@@ -55,6 +56,7 @@
             dtView.MultiSelect = false;
             dtView.Name = "dtView";
             dtView.ReadOnly = true;
+            dtView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dtView.RowTemplate.Height = 29;
             dtView.CellClick += dtView_CellClick;
             // 
@@ -104,29 +106,27 @@
             // 
             // btnAdd
             // 
+            btnAdd.BackColor = Color.Lime;
             resources.ApplyResources(btnAdd, "btnAdd");
             btnAdd.Name = "btnAdd";
-            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
+            btnUpdate.BackColor = Color.FromArgb(192, 192, 255);
             resources.ApplyResources(btnUpdate, "btnUpdate");
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
+            btnDelete.BackColor = Color.Red;
             resources.ApplyResources(btnDelete, "btnDelete");
             btnDelete.Name = "btnDelete";
-            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
-            // 
-            // lbCount
-            // 
-            resources.ApplyResources(lbCount, "lbCount");
-            lbCount.Name = "lbCount";
             // 
             // btnReload
             // 
@@ -140,7 +140,6 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnReload);
-            Controls.Add(lbCount);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnAdd);
@@ -174,7 +173,6 @@
         private Button btnAdd;
         private Button btnUpdate;
         private Button btnDelete;
-        private Label lbCount;
         private Button btnReload;
     }
 }

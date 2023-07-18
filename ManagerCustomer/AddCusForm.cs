@@ -1,15 +1,6 @@
 ﻿using ManagerCustomer.Entity;
 using ManagerCustomer.Service;
 using ManagerCustomer.Ulti;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ManagerCustomer
 {
@@ -62,7 +53,7 @@ namespace ManagerCustomer
                     realRecordL = tbRealLeft.Text.Trim(),
                     realRecordR = tbRealRight.Text.Trim(),
                     note = rtbNote.Text.Trim(),
-                    recordDate = DateTime.Now,
+                    recordDate = dateCreate.Value,
                 };
                 excelService.addCustomer(c);
                 this.Close();
@@ -87,6 +78,7 @@ namespace ManagerCustomer
             tbRealLeft.Text = string.Empty;
             tbRealRight.Text = string.Empty;
             rtbNote.Text = string.Empty;
+            dateCreate.Value = DateTime.Now;
         }
     }
 }

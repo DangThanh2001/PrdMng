@@ -125,13 +125,10 @@
   <data name="dtView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 214</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dtView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
   <data name="dtView.Size" type="System.Drawing.Size, System.Drawing">
     <value>1348, 507</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dtView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -145,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dtView.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -175,7 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="tbSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 16.2pt</value>
@@ -199,7 +196,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tbSearch.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 13.8pt</value>
@@ -226,7 +223,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
+  </data>
+  <data name="fromDate.CustomFormat" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
   </data>
   <data name="fromDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>244, 75</value>
@@ -247,7 +247,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;fromDate.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
+  </data>
+  <data name="toDate.CustomFormat" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
   </data>
   <data name="toDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>625, 75</value>
@@ -268,7 +271,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;toDate.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -298,7 +301,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -331,7 +334,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="cbDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -358,13 +361,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbDate.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>991, 179</value>
+    <value>991, 161</value>
   </data>
   <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 29</value>
+    <value>94, 47</value>
   </data>
   <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -382,13 +385,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1113, 179</value>
+    <value>1113, 161</value>
   </data>
   <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 29</value>
+    <value>94, 47</value>
   </data>
   <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -406,13 +409,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1227, 179</value>
+    <value>1227, 161</value>
   </data>
   <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 29</value>
+    <value>94, 47</value>
   </data>
   <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -430,33 +433,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbCount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 188</value>
-  </data>
-  <data name="lbCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
-  <data name="lbCount.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="lbCount.Text" xml:space="preserve">
-    <value>count</value>
-  </data>
-  <data name="&gt;&gt;lbCount.Name" xml:space="preserve">
-    <value>lbCount</value>
-  </data>
-  <data name="&gt;&gt;lbCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbCount.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbCount.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnReload.Font" type="System.Drawing.Font, System.Drawing">

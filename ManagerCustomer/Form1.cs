@@ -1,8 +1,6 @@
 using ManagerCustomer.Entity;
 using ManagerCustomer.Service;
 using ManagerCustomer.Ulti;
-using System.Net;
-using System.Windows.Forms;
 
 namespace ManagerCustomer
 {
@@ -22,7 +20,6 @@ namespace ManagerCustomer
         {
             dtView.DataSource = excelService.readFromExcel();
             list = excelService.readFromExcel();
-            lbCount.Text = "Tong: " + list.Count;
             dtView.Columns["recordDate"].Visible = false;
             dtView.ClearSelection();
         }
@@ -86,7 +83,7 @@ namespace ManagerCustomer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if(customer == null)
+            if (customer == null)
             {
                 return;
             }

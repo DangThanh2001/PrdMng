@@ -127,9 +127,9 @@ namespace ManagerCustomer.Service
                 worksheet.Cell(rowIndex, 6).Value = customer.machineRecordR;
                 worksheet.Cell(rowIndex, 7).Value = customer.realRecordL;
                 worksheet.Cell(rowIndex, 8).Value = customer.realRecordR;
-                worksheet.Cell(rowIndex, 9).Value = DateTime.Now;
+                worksheet.Cell(rowIndex, 9).Value = customer.recordDate;
                 worksheet.Cell(rowIndex, 10).Value = customer.note;
-                rowIndex++;
+
                 worksheet.Columns().AdjustToContents();
                 workbook.SaveAs(GlobalStrings.FILE_EXCEL_NAME);
             }
