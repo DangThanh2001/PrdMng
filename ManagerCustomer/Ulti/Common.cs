@@ -43,5 +43,13 @@ namespace ManagerCustomer.Ulti
                 return false;
         }
 
+
+        public static int calculateMaxPage(int listCount, int maxPerPage)
+        {
+            if (listCount == 0)
+                return 1;
+            return (listCount % maxPerPage == 0) 
+                ? listCount / maxPerPage : listCount / maxPerPage + 1;
+        }
     }
 }

@@ -44,6 +44,9 @@ namespace ManagerCustomer
             btnUpdate = new Button();
             btnDelete = new Button();
             btnReload = new Button();
+            btnPrev = new Button();
+            btnNext = new Button();
+            lbPage = new Label();
             ((System.ComponentModel.ISupportInitialize)dtView).BeginInit();
             SuspendLayout();
             // 
@@ -69,7 +72,6 @@ namespace ManagerCustomer
             // 
             resources.ApplyResources(tbSearch, "tbSearch");
             tbSearch.Name = "tbSearch";
-            tbSearch.TextChanged += tbSearch_TextChanged;
             // 
             // btnSearch
             // 
@@ -135,10 +137,32 @@ namespace ManagerCustomer
             btnReload.UseVisualStyleBackColor = true;
             btnReload.Click += btnReload_Click;
             // 
+            // btnPrev
+            // 
+            resources.ApplyResources(btnPrev, "btnPrev");
+            btnPrev.Name = "btnPrev";
+            btnPrev.UseVisualStyleBackColor = true;
+            btnPrev.Click += btnPrev_Click;
+            // 
+            // btnNext
+            // 
+            resources.ApplyResources(btnNext, "btnNext");
+            btnNext.Name = "btnNext";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
+            // 
+            // lbPage
+            // 
+            resources.ApplyResources(lbPage, "lbPage");
+            lbPage.Name = "lbPage";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lbPage);
+            Controls.Add(btnNext);
+            Controls.Add(btnPrev);
             Controls.Add(btnReload);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
@@ -174,5 +198,8 @@ namespace ManagerCustomer
         private Button btnUpdate;
         private Button btnDelete;
         private Button btnReload;
+        private Button btnPrev;
+        private Button btnNext;
+        private Label lbPage;
     }
 }
